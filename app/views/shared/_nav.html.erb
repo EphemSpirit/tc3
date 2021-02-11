@@ -16,7 +16,7 @@
           <div class="item"><%= link_to "Journal Entry", new_journal_path %></div>
           <div class="item"><%= link_to "Photo", '#' %></div>
           <div class="item"><%= link_to "To-Do", '#' %></div>
-          <div class="item"><%= link_to "View my Calendar", '#' %></div>
+          <div class="item"><%= link_to "View my Calendar", my_calendar_path %></div>
         </div>
       </div>
       <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "item right floated" %>

@@ -7,6 +7,7 @@ class User < ApplicationRecord
   after_create :build_dashboard
 
   has_many :journals, dependent: :destroy
+  has_many :meetings, dependent: :destroy
   has_one :dashboard, dependent: :destroy
 
   private

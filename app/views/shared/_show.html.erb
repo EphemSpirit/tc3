@@ -6,19 +6,19 @@
       <%= item.body %>
     <%# elsif item.is_a?(Agenda) %>
       <%#= item.body %>
-    <%# elsif item.is_a?(Meeting) %>
-      <%#= item.description %>
+    <% elsif item.is_a?(Meeting) %>
+      <%= item.description %>
     <%# else %>
       <%#= image_tag item.image %>
       <p><%#= item.summary %></p>
     <% end %>
   </p>
-  <%# unless item.is_a?(Meeting) %>
+  <% unless item.is_a?(Meeting) %>
     <p>
       <small>Tags: <%= raw item.tags.map(&:name).join(", ") %></small>
     </p>
     <%= render 'tags/form', taggable: item %>
-  <%# end %>
+  <% end %>
   <%#= link_to "Delete Entry", (item.is_a?(Journal) ? journal_path(item) :
                          item.is_a?(Photo) ? photo_path(item) :
                          item.is_a?(Meeting) ? meetings_path(item) : agendas_path(item)), method: :delete,
