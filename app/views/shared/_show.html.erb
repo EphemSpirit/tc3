@@ -15,9 +15,9 @@
   </p>
   <%# unless item.is_a?(Meeting) %>
     <p>
-      <small>Tags: <%#= raw item.tags.map(&:name).join(", ") %></small>
+      <small>Tags: <%= raw item.tags.map(&:name).join(", ") %></small>
     </p>
-    <%#= render 'tags/form', taggable: item %>
+    <%= render 'tags/form', taggable: item %>
   <%# end %>
   <%#= link_to "Delete Entry", (item.is_a?(Journal) ? journal_path(item) :
                          item.is_a?(Photo) ? photo_path(item) :
