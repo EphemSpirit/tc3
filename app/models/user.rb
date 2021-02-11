@@ -4,5 +4,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :journals
+  after_create :build_dashboard
+
+  has_many :journals, dependent: :destroy
+  has_one :dashboard, dependent: :destroy
+
+  private
+
+    def build_dashbaord
+      Dashbaord.create(user_id: self.id)
+    end
 end

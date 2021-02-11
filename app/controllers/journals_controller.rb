@@ -30,14 +30,14 @@ class JournalsController < ApplicationController
 
   def update
     @journal.update(journal_params)
-    redirect_to root_path
+    redirect_to my_dashboard_path
   end
 
 
   def destroy
     @journal.destroy
     flash[:notice] = "Entry successfully deleted"
-    redirect_to my_entries_path
+    redirect_to journals_path
   end
 
   private

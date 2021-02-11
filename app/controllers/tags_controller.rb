@@ -3,7 +3,7 @@ class TagsController < ApplicationController
   def create
     @tag = @taggable.tags.new(tag_params)
     @tag.save
-    redirect_to root_path
+    redirect_to my_dashboard_path
     flash[:notice] = "Entry added!"
   end
 
