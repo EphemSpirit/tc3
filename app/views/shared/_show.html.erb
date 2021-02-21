@@ -8,9 +8,9 @@
       <%#= item.body %>
     <% elsif item.is_a?(Meeting) %>
       <%= item.description %>
-    <%# else %>
-      <%#= image_tag item.image %>
-      <p><%#= item.summary %></p>
+    <% else %>
+      <%= image_tag item.image %>
+      <p><%= item.summary %></p>
     <% end %>
   </p>
   <% unless item.is_a?(Meeting) %>
