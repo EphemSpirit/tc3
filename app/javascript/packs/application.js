@@ -19,3 +19,6 @@ $(document).on('turbolinks:load', function() {
     $(this).closest('.message').transition('fade');
   });
 })
+
+require("trix")
+require("@rails/actiontext")

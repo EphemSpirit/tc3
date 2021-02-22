@@ -13,6 +13,10 @@ Rails.application.routes.draw do
     resources :tags, module: :photos
   end
 
+  resources :agendas, except: [:index] do
+    resources :tags, module: :agendas
+  end
+
   get '/tag_search', to: 'tags#search'
 
   get '/my_dashboard', to: 'dashboards#show'
@@ -24,6 +28,8 @@ Rails.application.routes.draw do
   get '/my_photos', to: 'photos#index'
   get '/new_photo', to: 'photos#new'
   post '/new_photo', to: 'photos#create'
+
+  get '/my_agendas', to: 'agendas#index'
 
   root 'static_pages#home'
 end

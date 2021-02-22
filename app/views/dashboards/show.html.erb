@@ -1,6 +1,6 @@
 <h2 class="ui centered header">My Dashboard</h2>
 
-<div class="ui grid">
+<div class="ui stackable centered grid">
   <div class="ui four wide column">
     <!-- loop through all a users topicables and generate a card for each (current_user.topicables.each do) -->
     <div class="ui card">
@@ -33,7 +33,7 @@
     <!-- loop through all a users topicables and generate a card for each (current_user.topicables.each do) -->
     <div class="ui card">
       <div class="content">
-        <div class="centered header"><%= link_to "My To-Dos", '#' %></div>
+        <div class="centered header"><%= link_to "My To-Dos", my_agendas_path %></div>
       </div>
       <div class="content blurb">
         Who has time to find a new piece of paper or spin up a phone app when you're out and about, just dump your

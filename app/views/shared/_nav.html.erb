@@ -1,4 +1,4 @@
-<div class="ui huge menu">
+<div class="ui huge stackable menu">
   <%= link_to "Time Capsule", root_path, class: "active item" %>
   <%= render 'shared/search' %>
   <div class="right menu">
@@ -15,7 +15,7 @@
         <div class="menu">
           <div class="item"><%= link_to "Journal Entry", new_journal_path %></div>
           <div class="item"><%= link_to "Photo", new_photo_path %></div>
-          <div class="item"><%= link_to "To-Do", '#' %></div>
+          <div class="item"><%= link_to "To-Do", new_agenda_path %></div>
           <div class="item"><%= link_to "View my Calendar", my_calendar_path %></div>
         </div>
       </div>
